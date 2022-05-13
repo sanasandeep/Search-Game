@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <head lang="en">
 	<meta http-equiv="content-type" content="text/html;charset=utf-8">
-	<title>Alphabet Soup</title>
+	<title>Myslate Tech</title>
 	<!-- Framework CSS -->
 	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
 	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
@@ -24,17 +24,17 @@
 
 <body>
 	<div class="container">
-	
-		<h3 class="center alt">&ldquo;Alphabet Soup&rdquo; Documentation by &ldquo;sney2002&rdquo; v1.0</h3>
-		
+
+		<h3 class="center alt">&ldquo;Myslate Tech&rdquo; Documentation by &ldquo;sney2002&rdquo; v1.0</h3>
+
 		<hr>
-		
-		<h1 class="center">&ldquo;Alphabet Soup&rdquo;</h1>
-		
-				<p class="prepend-top append-0">Thank you for purchasing my game. If you have any questions, please feel free to contact me <a href="http://codecanyon.net/user/sney2002">here</a>.</p>
-		
+
+		<h1 class="center">&ldquo;Myslate Tech&rdquo;</h1>
+
+				<p class="prepend-top append-0">If you have any questions, please feel free to contact me <a href="mailto:sanasandeep@gmail.com">here</a>.</p>
+
 		<hr>
-		
+
 		<h2 id="toc" class="alt">Table of Contents</h2>
 		<ol class="alpha">
 		    <li><a href="#gettingStarted">Getting Started</a></li>
@@ -45,11 +45,11 @@
 		    <li><a href="#events">Events</a></li>
 			<li><a href="#credits">Sources and Credits</a></li>
 		</ol>
-		
+
 		<hr>
-		
+
 		<h3 id="features">Features - <a href="#toc">top</a></h3>
-		
+
 		<ul>
 		    <li><b>(new)</b> Manage game options with a friendly admin interface</li>
 		    <li><b>(new)</b> unicode support</li>
@@ -60,11 +60,11 @@
 		    <li>Very light-weight</li>
 		    <li>Great support</li>
 		</ul>
-		
+
 		<hr>
-		
+
 		<h3 id="gettingStarted"><strong>A) Getting started</strong> - <a href="#toc">top</a></h3>
-		
+
 		<p>Before start using this script you need to change the username and password:</p>
         <script type="syntaxhighlighter" class="brush: php">
             <?php
@@ -73,13 +73,13 @@
 
             $config['password'] = "My-$uper_SeCure-pa$sw0rd>·%";
 		</script>
-		
+
 		<p>Now you can start creating puzzles, just go to the admin page <code>http://&lt;domain&gt;/&lt;install-dir&gt;/admin/</code>,
 		after login, click on "create puzzle" and start adding words.</p>
 		<img src="assets/images/login.png">
-		
-		<p>Because the max size of the grid is 20 and the max number of words is <code>size * 2</code> (<a href="#options">see below</a>), you must add at least 40 words to make the game work properly. The script choose random words of the supplied.</p>		
-		
+
+		<p>Because the max size of the grid is 20 and the max number of words is <code>size * 2</code> (<a href="#options">see below</a>), you must add at least 40 words to make the game work properly. The script choose random words of the supplied.</p>
+
 		<p><b>Note:</b> You can put different words in the list and in the board, just separate these with a colon (e.g. blue:azul, japan:tokyo)</p>
 		<img src="assets/images/create-puzzle.png">
         <p>Congratulations: You have HTML5 WordSearch installed.</p>
@@ -106,8 +106,8 @@
             wordDirections: ['horizontal', 'vertical', 'diagonal', 'reverse'] // how to insert word in the grid
         });
         </script>
-        <p>you can change game options individualy per each puzzle through the admin interface</p> 
-        
+        <p>you can change game options individualy per each puzzle through the admin interface</p>
+
         <p><b>Note</b>: you can change the default game options that are displayed in the admin panel, just edit the file <code>admin/include/config.php</code> (useful if for example you rarely use the english alphabet).</p>
         <img src="assets/images/puzzle-options.png">
         <hr>
@@ -125,7 +125,7 @@
 
         <h3 id="cssFiles"><strong>D) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
 
-		<p>There are two CSS files.<code>style.css</code> contains all of the specific stylings for the app. The file is separated into sections using:</p>  
+		<p>There are two CSS files.<code>style.css</code> contains all of the specific stylings for the app. The file is separated into sections using:</p>
 
 <pre>
 /*== Word Search puzzle ==*/
@@ -140,8 +140,8 @@
 
 /*== Modal window ==*/
 </pre>
-		
-		<p><b>Note:</b> You may want to change the <code>div.modal</code> rule at the Modal Window section.</p> 
+
+		<p><b>Note:</b> You may want to change the <code>div.modal</code> rule at the Modal Window section.</p>
 		<p>The <code>buttons.css</code> file specifies the appearance of the buttons.</p>.
 
 		<hr>
@@ -154,9 +154,9 @@
 			<li><a href="http://requirejs.org/" title="requirejs">requirejs</a></li>
 			<li>app.js: load and initialize the game.</li>
 		</ol>
-		  
+
 		<p>To initialize the app just create an instance of <code>game.Soup()</code> after the DOM is ready. You can also specify an object with options (<a href="#options">see above</a>).</p>
-		
+
 		<script type="syntaxhighlighter" class="brush: js">
 		    var soup = game.Soup();
 		    // OR
@@ -169,19 +169,19 @@
 
 <hr>
 <h3 id="events"><strong>F) Events</strong> - <a href="#toc">top</a></h3>
-		
+
 		<p>There are three events you can subscribe:</p>
 		<ol>
 			<li><b>word.hint</b>: Emitted when use the <code>solve</code> button.</li>
 			<li><b>word.found</b>: Emitted when a word is found</li>
 			<li><b>game.finish</b>: Emitted when the game is finished (Duh), you receive the time and score.</li>
 		</ol>
-        
+
 		<script type="syntaxhighlighter" class="brush: js">
 		    var soup = game.Soup();
 
 		    soup.channel.on('word.hint', function() { alert("You cheater"); });
-		    
+
 		    soup.channe.on('game.finish', function(time, score) {
 	            alert("You are a Genius");
 	            $.post("score.php", {time: time, score: score}, function() {
@@ -192,19 +192,19 @@
 
 <hr>
 		<h3 id="credits"><strong>G) Sources and Credits</strong> - <a href="#toc">top</a></h3>
-		
+
 		<p>I've used the following code:
-		
+
 		<ul>
 			<li>Google-styled buttons by <a href="http://pixify.com/blog/use-google-plus-to-improve-your-ui">pixify</a>.</li>
 			<li><a href="http://code.google.com/p/flashcanvas/">flashcanvas</a> for compatibility with IE (<a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a>).</li>
 		</ul>
-		
+
 		<hr>
-		
-		<p class="append-bottom alt large"><strong>Jhonatan Salguero</strong></p>
+
+		<p class="append-bottom alt large"><strong>Sandeep Sana</strong></p>
 		<p><a href="#toc">Go To Table of Contents</a></p>
-		
+
 		<hr class="space">
 	</div><!-- end div .container -->
 	<script>
